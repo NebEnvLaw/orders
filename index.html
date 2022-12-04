@@ -5,7 +5,7 @@
   <body>
     <h1 style="text-align:center">Orders</h1>
     <table id="OrderTable">
-      <tr>
+      <thead>
         <th>#</th>
         <th onclick="sortTable(0)">Order Date</th>
         <th onclick="sortTable(1)">Case No.</th>
@@ -14,8 +14,8 @@
         <th>Violation Description</th>
         <th>Legal Provision(s) Violated</th>
         <th>Link</th>
-      </tr>
-      <!-- <tbody> -->
+      </thead>
+      <tbody>
         <tr class="AdministrativeOrder">
           <td>&check;</td>
           <td>2010-01-05</td>
@@ -796,47 +796,7 @@
           <td></td>
           <td></td>
         </tr>
-      <!-- </tbody> -->
+      </tbody>
     </table>
-    <script>
-      function sortTable(n) {
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-        table = document.getElementById("OrderTable");
-        switching = true;
-        dir = "asc";
-        while (switching) {
-          switching = false;
-          rows = table.rows;
-          for (i = 1; i < (rows.length -1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementByTagName("TD")[n];
-            y = rows[i + 1].getElementByTagName("TD")[n];
-            if (dir == "asc") {
-              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                shouldSwitch = true;
-                break;
-              }
-            }
-            else if (dir == "desc") {
-              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                shouldSwitch = true;
-                break;
-              }
-            }
-          }
-          if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount ++;
-          }
-          else {
-            if (switchcount == 0 && dir == "asc") {
-              dir = "desc";
-              switching = true;
-            }
-          }
-        }
-      }
-    </script>
   </body>
 </html>
