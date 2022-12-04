@@ -5,7 +5,7 @@
   <body>
     <h1 style="text-align:center">Orders</h1>
     <table id="OrderTable">
-      <thead>
+      <tr>
         <th>#</th>
         <th onclick="sortTable(0)">Order Date</th>
         <th onclick="sortTable(1)">Case No.</th>
@@ -14,8 +14,8 @@
         <th>Violation Description</th>
         <th>Legal Provision(s) Violated</th>
         <th>Link</th>
-      </thead>
-      <tbody>
+      </tr>
+      <!-- <tbody> -->
         <tr class="AdministrativeOrder">
           <td>&check;</td>
           <td>2010-01-05</td>
@@ -796,7 +796,7 @@
           <td></td>
           <td></td>
         </tr>
-      </tbody>
+      <!-- </tbody> -->
     </table>
     <script>
       function sortTable(n) {
