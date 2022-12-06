@@ -3,6 +3,13 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="/tablesorter-master/dist/js/jquery.tablesorter.js"></script>
+    <script id="js">
+      $(function() {
+        $("table").tablesorter({
+          theme : 'blue',
+        });
+      });
+    </script>
   </head>
   <body>
     <h1 style="text-align:center">Orders</h1>
@@ -800,10 +807,5 @@
         </tr>
       </tbody>
     </table>
-    <script>
-      $(function() {
-        $("#OrderTable").tablesorter();
-      });
-    </script>
   </body>
 </html>
