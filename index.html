@@ -15,7 +15,7 @@
       $(document).ready(function(){
         $("#myInput").on("keyup", function() {
           var value = $(this).val().toLowerCase();
-          $("#OrderTable tr").filter(function() {
+          $("#OrderBody tr").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
           });
         });
@@ -23,7 +23,7 @@
       </script>
   </head>
   <body>
-    <h1 style="text-align:center">Orders</h1>
+    <h1 style="text-align:center">NDEE Orders</h1>
     <p>Type in the input field to filter the table:</p>
     <input id="myInput" type="text" placeholder="Search . . .">
     <br><br>
@@ -38,7 +38,7 @@
         <th>Legal Provision(s) Violated</th>
         <th>Link</th>
       </thead>
-      <tbody>
+      <tbody id="OrderBody">
         <tr class="AdministrativeOrder">
           <td>&check;</td>
           <td>2010-01-05</td>
