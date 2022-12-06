@@ -10,9 +10,22 @@
         });
       });
     </script>
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
   </head>
   <body>
-    <h1 style="text-align:center">Orders</h1>
+    <h1 style="text-align:center">NDEE Orders</h1>
+    <p>Type in the input field to filter the table:</p>
+    <input id="myInput" type="text" placeholder="Search . . .">
+    <br>
     <table id="OrderTable" class="tablesorter">
       <thead>
         <th>#</th>
