@@ -8,7 +8,9 @@ td:nth-child(3) {
   text-align:center;
 }
 
-
+body {
+  font-family:Consolas;
+}
 .sc {
   font-variant:small-caps;
 }
